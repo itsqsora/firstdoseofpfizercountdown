@@ -12,10 +12,15 @@
     <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
     
 <style>
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 600) {
     #timer {
-        margin-left: 380px;
+        margin-left: 100px;
     }
+}
+@media only screen and (min-width: 900) {
+  div.example {
+    font-size: 80px;
+  }
 }
 body {
     color: brown;
@@ -31,21 +36,16 @@ p {
     font-size: 50px;
 }
 #timer {
-    display: flex;
     text-align: center;
     /* transform: translateX(30%); */
     font-family: 'Chonburi', cursive;
     font-size: 3em;
-    width: 700px;
-    
 }
 
 #timer div {
     font-family: 'Chonburi', cursive;
     display: inline-block;
-    min-width: 90px;
-    padding: 10px;
-    margin: 15px;
+    padding: 4vw;
 }
 
 #timer div span {
@@ -53,13 +53,13 @@ p {
     display: block;
     margin-top: 15px;
     font-size: .35em;
-    font-weight: 400;
+    
 }
 #footer {
     font-family: 'Chonburi', cursive;;
     font-size: 15px;
     text-align: center;
-    margin-top: 300px;
+    margin-top: 240px;
 
 }
 #footer a {
@@ -75,24 +75,6 @@ p {
 }
 #footer a:active {
     color: brown;
-}
-.css-button-sliding-to-top--red {
-  min-width: 130px;
-  height: 40px;
-  color: #fff;
-  padding: 5px 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  border-radius: 5px;
-  z-index: 0;
-  background: #fff;
-  overflow: hidden;
-  border: 2px solid brown;
-  color: brown;
 }
 #footer a:hover {
   color: #fff;
@@ -111,11 +93,30 @@ p {
   width: 100%;
   background: brown;
 }
+text {
+    cursor: pointer;
+}
+text:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: brown;
+}
+text:hover:after {
+    height: 5px;
+
+}
+
   </style>
 </head>
 
 <body>
-<p>ฉีดไฟเซอร์</p>
+<p>ฉีดไฟเซอร์ <text>#เข็มแรก<text></p>
 <div id="timer"></div>
 <div id="footer">Created by <a href="https://github.com/soranankiw1" target="_blank">Qsora</a></div>
 <script type="text/javascript">
