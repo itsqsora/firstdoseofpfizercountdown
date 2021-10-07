@@ -1,15 +1,95 @@
+
+<!-- Design by foolishdeveloper.com -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pfizer</title>
-    link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
     
+<style media="screen">
+body {
+    font-family: 'Chonburi', cursive;
+    text-align: center;
+    padding: 100px 60px;
+    background: #e9e9e9;
+    font-family: sans-serif;
+}
+p {
+    margin-top: -50px;
+    font-family: 'Chonburi', cursive;
+    font-size: 50px;
+}
+#timer {
+    transform: translateX(30%);
+    font-family: 'Chonburi', cursive;
+    font-size: 3em;
+    font-weight: 100;
+    padding: 20px;
+    width: 700px;
+    
+}
+
+#timer div {
+    font-family: 'Chonburi', cursive;
+    display: inline-block;
+    min-width: 90px;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+#timer div span {
+    font-family: 'Chonburi', cursive;
+    display: block;
+    margin-top: 15px;
+    font-size: .35em;
+    font-weight: 400;
+}
+#footer {
+    font-family: 'Chonburi', cursive;;
+    font-size: 15px;
+
+}
+#footer a {
+    font-family: 'Chonburi', cursive;;
+    font-size: 15px;
+    text-decoration: none;
+}
+  </style>
+</head>
+
+<body>
+<p>ฉีดไฟเซอร์</p>
+<div id="timer"></div>
+<div id="footer">Created by <a href="https://github.com/soranankiw1" target="_blank">Qsora</a></div>
+<script type="text/javascript">
+function updateTimer() {
+    future = Date.parse("oct 11, 2021 10:30:00");
+    now = new Date();
+    diff = future - now;
+
+    days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    hours = Math.floor(diff / (1000 * 60 * 60));
+    mins = Math.floor(diff / (1000 * 60));
+    secs = Math.floor(diff / 1000);
+
+    d = days;
+    h = hours - days * 24;
+    m = mins - hours * 60;
+    s = secs - mins * 60;
+
+    document.getElementById("timer")
+        .innerHTML =
+        '<div>' + d + '<span>วัน</span></div>' +
+        '<div>' + h + '<span>ชั่วโมง</span></div>' +
+        '<div>' + m + '<span>นาที</span></div>' +
+        '<div>' + s + '<span>วินาที</span></div>';
+}
+setInterval('updateTimer()', 1000);
+</script>
 </body>
 </html>
