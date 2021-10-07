@@ -12,18 +12,21 @@
     <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
     
 <style>
+@media only screen and (min-width: 992px) {
+    #timer {
+        margin-left: 380px;
+    }
+}
 body {
     color: brown;
     font-family: 'Chonburi', cursive;
     text-align: center;
-    padding: 100px 60px;
     background: #fafafa;
     font-family: sans-serif;
     overflow: hidden;
 }
 p {
     text-align: center;
-    margin-top: -50px;
     font-family: 'Chonburi', cursive;
     font-size: 50px;
 }
@@ -107,14 +110,6 @@ p {
   height: 0;
   width: 100%;
   background: brown;
-}
-@media only screen and (min-width: 768px) {
-    /* for desktop */
-    #timer {
-        text-align: center;
-        transform: translateX(45%);
-    }
-
 }
   </style>
 </head>
